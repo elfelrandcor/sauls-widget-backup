@@ -1,0 +1,37 @@
+{
+  "name": "sauls/widget-bundle",
+  "type": "symfony-bundle",
+  "description": "Sauls Symfony Widget Bundle",
+  "keywords": [
+    "Widget",
+    "Bundle"
+  ],
+  "homepage": "http://github.com/sauls/SaulsWidgetBundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Saulius Vaiceliunas",
+      "email": "vaiceliunas@inbox.lt",
+      "homepage": "http://saulius.vaiceliunas.lt"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "symfony/framework-bundle": "~2.8|~3.0|^3.1",
+    "symfony/twig-bundle": "~2.8|~3.0|^3.1",
+    "symfony/options-resolver": "~2.8|~3.0|^3.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sauls\\WidgetBundle\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Sauls\\WidgetBundle\\": "tests/"
+    }
+  }
+}

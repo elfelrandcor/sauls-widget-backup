@@ -1,0 +1,16 @@
+services:
+  sauls_widget.widget_factory:
+    class: Sauls\WidgetBundle\Widget\WidgetFactory
+
+  sauls_widget.twig_extension.widget:
+    class: Sauls\WidgetBundle\Twig\WidgetExtension
+    public: false
+    arguments: ["@sauls_widget.widget_factory"]
+    tags:
+      - { name: twig.extension }
+
+  sauls_widget.widget.base.twig:
+    class: Sauls\WidgetBundle\Widget\Base\TwigWidget
+    public: false
+    calls:
+      - ["setTwig", ["@twig"]]

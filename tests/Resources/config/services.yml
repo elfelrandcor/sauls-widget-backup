@@ -1,0 +1,22 @@
+imports:
+  - { resource: "../../../src/Resources/config/services.yml" }
+services:
+  sauls_widget.widget.test:
+    class: Sauls\WidgetBundle\Widget\Stub\TestWidget
+    tags:
+      - { name: sauls_widget.widget, alias: test_widget }
+
+  sauls_widget.widget.sample:
+    class: Sauls\WidgetBundle\Widget\Stub\SampleWidget
+    tags:
+      - { name: sauls_widget.widget }
+
+  sauls_widget.widget.sample_with_different_name:
+    class: Sauls\WidgetBundle\Widget\Stub\SampleWidget
+    tags:
+      - { name: sauls_widget.widget, alias: different_sample_widget }
+
+  sauls_widget.widget.sample_options:
+    class: Sauls\WidgetBundle\Widget\Stub\SampleOptionsWidget
+    tags:
+      - { name: sauls_widget.widget, alias: sample_options.widget }
